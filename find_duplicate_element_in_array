@@ -1,0 +1,23 @@
+// Finding duplicate elements in an array
+import java.util.*;
+public class Recursion1 {
+    public static void printDuplicate(int [] arr){
+        HashSet<Integer> set = new LinkedHashSet();
+        HashSet<Integer> set_duplicate = new LinkedHashSet();
+        for(int val: arr){
+        if(set.contains(val)){
+            set_duplicate.add(val);
+        }
+        else{
+            set.add(val);
+        }         }  
+        System.out.println("duplicate values");
+        System.out.println(set_duplicate);  
+}
+      
+    public static void main(String [] args){ 
+        int arr[] = {1,2,2,3,3,4,4,4};
+        printDuplicate(arr);    
+
+}
+}
